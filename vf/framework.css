@@ -1,47 +1,94 @@
-/* Veryvisa experience framework. Source: workspace/bin/site_framework/. */
-body[data-vf-site]{--vf-ink:#202c35;--vf-muted:#54616c;--vf-line:#d8dfe1;--vf-accent:#285c55;--vf-paper:#f6f8f5;--vf-heading:system-ui;--vf-radius:12px}
-.vf-network,.vf-welcome,.vf-workspace,.vf-tools{box-sizing:border-box;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--vf-ink);font-size:16px;line-height:1.7;text-align:left}
-.vf-network *,.vf-welcome *,.vf-workspace *,.vf-tools *{box-sizing:border-box}
-body[data-vf-site] .vf-network{display:flex;align-items:center;flex-wrap:wrap;gap:8px 22px;width:100%;margin:0;padding:10px max(20px,calc((100% - 1200px)/2));background:#fff;border-bottom:1px solid var(--vf-line);font-size:12px;position:relative;z-index:2}
-.vf-network a{display:inline-flex;align-items:center;min-height:32px;color:var(--vf-ink);text-decoration:none;padding:2px 0;border-radius:0;white-space:nowrap;background:transparent}
-.vf-network .vf-wordmark{font-size:17px;font-weight:800;letter-spacing:.035em}.vf-wordmark span{font-size:10px;letter-spacing:.12em;margin-left:7px;font-weight:500}.vf-network-label{color:var(--vf-muted);margin-right:auto;padding-left:18px;border-left:1px solid var(--vf-line)}
-body[data-vf-site] .vf-welcome{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center;width:100%;max-width:1200px;margin:24px auto 56px;padding:clamp(24px,5vw,64px);background:var(--vf-paper);border:1px solid color-mix(in srgb,var(--vf-accent) 18%,white);border-top:5px solid var(--vf-accent);border-radius:var(--vf-radius);isolation:isolate}
-.vf-kicker{font-size:11px!important;font-weight:750;letter-spacing:.15em;color:var(--vf-accent)!important;margin:0 0 24px!important;line-height:1.6!important}
-.vf-intro #vf-heading,.vf-workspace h1{font-family:var(--vf-heading);font-size:clamp(26px,3vw,40px)!important;line-height:1.22!important;font-weight:650;letter-spacing:-.035em;color:var(--vf-ink)!important;max-width:650px;margin:0 0 24px!important;text-wrap:balance}
-.vf-lead{font-size:17px!important;line-height:1.85!important;color:var(--vf-muted)!important;margin:0 0 28px!important;max-width:650px}
-.vf-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin:22px 0}.vf-actions a,.vf-actions button{font:600 14px/1.6 system-ui;color:var(--vf-accent);min-height:44px;display:inline-flex;align-items:center;gap:18px;text-decoration:none;border:0;background:transparent;padding:10px 0;cursor:pointer}
-.vf-actions .vf-primary{background:var(--vf-accent);color:#fff!important;border-radius:var(--vf-radius);padding:12px 20px;border:1px solid var(--vf-accent)}
-.vf-caption{font-size:12px!important;color:var(--vf-muted)!important;margin:24px 0 0!important}
-.vf-routes{border-top:1px solid var(--vf-line)}.vf-routes h2{font:600 12px/1.5 system-ui!important;color:var(--vf-muted)!important;letter-spacing:.08em;margin:20px 0 10px!important}
-.vf-routes .vf-route{display:grid;grid-template-columns:24px minmax(0,1fr) 18px;gap:14px;align-items:start;padding:20px 0;border-bottom:1px solid var(--vf-line);color:var(--vf-ink)!important;text-decoration:none;background:none;border-radius:0;transition:padding .15s}
-.vf-route:hover{padding-left:8px!important}.vf-route strong{display:block;font:650 18px/1.5 var(--vf-heading);margin:0 0 6px}.vf-route small{display:block;font:400 13px/1.7 system-ui;color:var(--vf-muted)}.vf-step{font:600 11px/2.5 ui-monospace,monospace;color:var(--vf-accent)}
-.vf-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:40px auto 16px;padding:16px 0;border-top:1px solid var(--vf-line);max-width:1100px;background:transparent}.vf-tools button,.vf-workspace button:not(.vf-primary){font:500 13px/1.5 system-ui;border:1px solid var(--vf-line);padding:10px 16px;border-radius:8px;background:#fff;color:#293943;cursor:pointer;min-height:44px}.vf-tools [role=status]{font-size:13px;background:#fff;color:#293943}.vf-tools [hidden],.vf-workspace [hidden]{display:none!important}
-body[data-vf-site] .vf-workspace{max-width:920px;margin:0 auto;padding:48px 24px 80px;background:#fff;min-height:80vh}.vf-workspace a{color:var(--vf-accent)}.vf-workspace .vf-kicker{margin-top:40px!important}.vf-privacy{padding:16px 20px;background:var(--vf-paper);border-left:3px solid var(--vf-accent);font-size:13px;color:var(--vf-muted)}
-.vf-panel{margin:36px 0;border-top:1px solid var(--vf-line);padding:24px 0}.vf-panel h2{font:650 22px/1.4 var(--vf-heading);margin:0 0 16px;color:var(--vf-ink)}.vf-panel p{color:var(--vf-muted);font-size:15px}.vf-checklist{padding:0;list-style:none}.vf-checklist li{margin:0;border-bottom:1px solid var(--vf-line)}.vf-checklist label{display:flex;align-items:flex-start;gap:14px;min-height:52px;padding:14px 0;cursor:pointer}.vf-checklist input{width:20px;height:20px;flex:none;margin-top:4px;accent-color:var(--vf-accent)}[data-vf-saved]{padding:0;list-style:none}[data-vf-saved] li{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--vf-line);padding:14px 0}[data-vf-saved] a{overflow-wrap:anywhere}[data-vf-saved] small{display:block;color:var(--vf-muted)}
-body[data-vf-site] :where(a,button,input,select,textarea):focus-visible{outline:3px solid #c77d00;outline-offset:4px;scroll-margin-block:100px}
-body[data-vf-site] :where(img,video){max-width:100%}body[data-vf-site] :where(main,.wrap,.header-inner){min-width:0}body[data-vf-site] :where(th,td){overflow-wrap:anywhere}
-body[data-vf-site="cross-border"] .vf-welcome{border-bottom:5px solid var(--vf-accent);border-top:1px solid var(--vf-line)}
-body[data-vf-site="invest-compare"] .vf-welcome{border-top:0;border-left:7px solid var(--vf-accent)}
-body[data-vf-site="mexico"] .vf-welcome{border:0;border-bottom:8px solid var(--vf-accent);background:linear-gradient(115deg,#fcf4e9 70%,#f3e1c7 70%)}
-body[data-vf-site="business"] .vf-welcome{grid-template-columns:1fr 1fr;border-top:10px double var(--vf-accent)}
-body[data-vf-site="youth-care-guide"] .vf-welcome{border:0;background:#e9f4ef}.vf-workspace [data-vf-progress]{font-size:13px}
-@media(max-width:760px){body[data-vf-site] .vf-welcome{grid-template-columns:1fr;gap:28px;padding:28px 22px;margin:16px auto 32px}.vf-welcome h1{font-size:34px!important}.vf-network-label{display:none}body[data-vf-site] .vf-network{gap:8px 16px;padding:8px 16px}.vf-network .vf-wordmark{margin-right:auto}.vf-wordmark span{display:none}.vf-routes h2{margin-top:16px!important}.vf-route{padding:15px 0!important}.vf-workspace h1{font-size:32px!important}.vf-actions{gap:10px 16px}.vf-network a{min-height:36px}}
-@media(prefers-reduced-motion:reduce){.vf-route{transition:none!important}html{scroll-behavior:auto!important}}
-@media print{.vf-network,.vf-tools,body>header,.vf-actions,body>footer,.menu-btn,nav,.lb{display:none!important}body[data-vf-site]{background:#fff;color:#000}body[data-vf-site] .vf-workspace{max-width:none;padding:0}.vf-panel{break-inside:avoid}.vf-welcome{break-inside:avoid}.vf-checklist input{appearance:auto}a{color:#000!important}.vf-panel a:after{content:" (" attr(href) ")";font-size:10px;overflow-wrap:anywhere}[data-vf-saved] button{display:none}}
-/* 整卡可点（2026-09-30，用户令「card 里可以直接点击进入下一页」）
-   用法：卡片容器加 .vf-card，卡里的主链接（通常是标题里的 <a>）加 .vf-card-link；
-   卡底原来那行「查看更多 →」若保留作视觉提示，改成 <span class="vf-card-cue" aria-hidden="true">。
-   主链接的 ::after 伸展覆盖整卡；卡内其他链接、按钮、表单抬到上层，仍可单独点。不把整卡包成 <a>（内含链接会非法嵌套）。 */
-.vf-card{position:relative}
-.vf-card .vf-card-link::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
-.vf-card a:not(.vf-card-link),.vf-card button,.vf-card input,.vf-card select,.vf-card summary,.vf-card label{position:relative;z-index:2}
-.vf-card:hover{cursor:pointer;border-color:var(--vf-accent,currentColor);box-shadow:0 6px 18px rgba(0,0,0,.10)}
-.vf-card:hover .vf-card-link{text-decoration:underline}
-.vf-card .vf-card-link:focus{outline:none}
-.vf-card .vf-card-link:focus-visible::after{outline:3px solid var(--vf-accent,currentColor);outline-offset:-3px}
-.vf-card:has(.vf-card-link:focus-visible){box-shadow:0 0 0 1px var(--vf-accent,currentColor)}
-.vf-card-cue{display:inline-block;margin-top:8px;font-weight:700;color:var(--vf-accent,currentColor)}
-@media (prefers-reduced-motion:no-preference){.vf-card{transition:box-shadow .15s ease,border-color .15s ease}}
-.vf-card.vf-auto h3 .vf-card-link{color:inherit;text-decoration:none}
-.vf-card.vf-auto:hover h3 .vf-card-link{text-decoration:underline}
-.vf-card.vf-auto .vf-card-cue{margin-top:0}
+@import url("../vv/theme.css");
+/* Native v2 adapter: semantic roles are generated by site_tokens.py before build. */
+:root{--ground:var(--vv-bg);--card:var(--vv-surface);--ink:var(--vv-ink);--muted:var(--vv-muted);--brand:var(--vv-primary);--brand-ink:var(--vv-primary);--brand-2:var(--vv-accent);--accent-ink:var(--vv-accent);--deep:var(--vv-surface-2);--tint:var(--vv-surface-2);--tint-2:var(--vv-accent-soft);--line:var(--vv-line-strong);--on-brand:var(--vv-on-primary);--lvna-fg:var(--vv-muted);--r:var(--vv-radius);--max:var(--vv-wide)}
+html{scroll-padding-top:1rem;text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html body{font:400 var(--vv-step-0)/var(--vv-leading) var(--vv-font-sans);overflow-wrap:anywhere}
+html body :is(h1,h2,h3){font-family:var(--vv-font-heading);line-height:1.3}
+html body h1{font-size:var(--vv-step-4)}
+html body h2{font-size:var(--vv-step-3)}
+html body h3{font-size:var(--vv-step-1)}
+html body main :is(p,li,dd){max-inline-size:40ic}
+html body :is(a,button,input,select,summary,[tabindex]):focus-visible{outline:var(--vv-focus-w) solid var(--vv-focus);outline-offset:var(--vv-focus-o)}
+html body :is(button,select,input:not([type=checkbox]),summary,.button,nav a,.vf-tools a){min-height:44px;min-width:44px;font-family:inherit}
+html body :is(button,select,input,summary){font-size:1em}
+html body :is(a,button,select,input){max-inline-size:100%}
+html body nav a{display:inline-flex;align-items:center;padding:.45rem .6rem}
+html body :is(header,.mast,.topbar){position:static}
+html body :is(.topbar,footer.site){background:var(--vv-surface-2);color:var(--vv-ink)}
+html body :is(.topbar,footer.site) :is(a,b){color:var(--vv-primary)}
+html body .mast>div{flex-wrap:wrap;min-width:0}
+html body nav.main{overflow:visible;white-space:normal;flex-wrap:wrap;width:auto;gap:.35rem;margin:0;padding:0}
+html body nav.main a{flex:0 1 auto;white-space:normal}
+html body .brand{white-space:normal;min-width:0}
+html body .brand small{white-space:normal;font-size:var(--vv-step--1)}
+.vv-net{display:flex;align-items:center;flex-wrap:wrap;gap:.3rem 1rem;padding:.25rem var(--gutter);border-bottom:1px solid var(--vv-line);background:var(--vv-surface);font-size:var(--vv-step--1)}
+.vv-net span{color:var(--vv-muted)}
+.vv-card{position:relative;isolation:isolate;background:var(--vv-surface);border:1px solid var(--vv-line-strong);border-radius:var(--vv-radius)}
+html body .vv-card h3 a{position:static;display:inline;min-height:0;color:var(--vv-primary);text-decoration:underline;text-underline-offset:.2em}
+.vv-card h3 a::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+.vv-card h3 a:focus-visible{outline:none}
+.vv-card h3 a:focus-visible::after{outline:var(--vv-focus-w) solid var(--vv-focus);outline-offset:var(--vv-focus-o)}
+.vv-card:has(h3 a:hover){background:var(--vv-surface-2)}
+.vv-card .vv-lift{position:relative;z-index:2}
+html body .sit{display:flex;flex-direction:column;align-items:stretch;cursor:default}
+html body .sit .small{font-size:var(--vv-step--1)}
+html body .sit h3{margin:0}
+html body .sit .vv-lift{min-height:44px}
+html body :is(.lv,.chip,.stance){white-space:normal;overflow-wrap:anywhere}
+html body .lv3{background:var(--vv-surface-2);color:var(--vv-st-open);border:1px solid currentColor}
+html body .lv2{background:var(--vv-surface-2);color:var(--vv-primary);border:1px solid currentColor}
+html body .lv1{background:var(--vv-accent-soft);color:var(--vv-st-paused);border:1px solid currentColor}
+html body .lv0{background:var(--vv-surface-2);color:var(--vv-muted);border:1px solid currentColor}
+html body .myth .t::before{color:var(--vv-st-open)}
+html body .myth .m::before{color:var(--vv-st-paused)}
+html body .myth{border-left-color:var(--vv-st-paused)}
+html body .stance.praise{background:var(--vv-surface-2);color:var(--vv-st-open)}
+html body .stance.complaint{background:var(--vv-accent-soft);color:var(--vv-st-paused)}
+html body .stance.mixed{background:var(--vv-surface-2);color:var(--vv-primary)}
+html body .button.primary:hover{background:var(--vv-primary);color:var(--vv-on-primary);text-decoration:underline}
+html body :is(.grid,.split,.f-row,.f-head,.f-controls,.guide,.cd-grid)>*{min-inline-size:0}
+html body .guide{grid-template-columns:minmax(0,auto) minmax(0,1fr)}
+html body .guide dt{white-space:normal}
+html body :is(.vf-tools,.vf-actions){display:flex;flex-wrap:wrap;gap:.75rem;padding-block:1rem}
+html body :is(.vf-tools,.vf-actions) button{background:var(--vv-surface);color:var(--vv-primary);border:1px solid var(--vv-line-strong);padding:.5rem .75rem;border-radius:var(--vv-radius)}
+html body .vf-checklist{list-style:none;padding:0}
+.vf-checklist label{display:flex;align-items:start;gap:.6rem;padding:.6rem 0}
+.vf-checklist input{min-width:24px;min-height:24px;flex:none}
+.vf-panel{margin-block:2rem}
+.vf-workspace>h1{margin-block:1rem}
+html body .skip{top:auto;transform:translateY(-200%)}
+html body .skip:focus{top:12px;transform:none}
+@media(max-width:48rem){
+ .vv-net{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;max-width:100%}.vv-net>*{flex:none}.vv-net>span{display:none}
+ html body :is(.split,.quote-card,.cd-grid,.reader-chapter .grid,.reader-steps,.evidence-grid){grid-template-columns:minmax(0,1fr)}
+ html body .cover .cover-in{padding-inline:var(--gutter)}
+ html body .f-head{display:flex;flex-wrap:wrap}
+ html body .f-field{flex-wrap:wrap}
+ html body :is(.f-field select,.home-search input){min-width:0;width:100%}
+ html body .f-dims{display:flex;flex-wrap:wrap}
+ html body .guide{display:block}.guide dd{margin-bottom:.5rem}
+ html body :is(.brand,.topbar>div){max-width:100%;overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+html body .search-results{list-style:none;padding:0;max-width:none}
+.search-results>li{padding-block:1rem;border-bottom:1px solid var(--vv-line)}
+html body .search-results h2{font-size:var(--vv-step-1)}
+html body #search form{align-items:end;flex-wrap:wrap}
+#search form label{flex:1;min-width:0;display:flex;flex-direction:column}
+html body #search input{border:1px solid var(--vv-line-strong)}
+html body main .vv-answer :is(p,li){max-inline-size:40ic}
+html body .f-focus{white-space:normal}
+/* 200% 字号时站头超过 35% 屏高（A3，全站；site-line-1025）：照 invest 的窄屏站头——收起口号条与站名副标题，导航三项不换行 */
+@media(max-width:48rem){
+ html body .topbar,html body .brand small{display:none}
+ html body .mast>div{gap:.15rem;padding-block:.15rem}html body .brand{gap:.5rem}html body .brand-mark{width:32px;height:32px;font-size:1rem}
+ html body .vv-net{overflow-x:auto}html body .vv-net a{white-space:nowrap;padding-block:.1rem;line-height:1.2}
+ html body .mast nav.main{width:100%;gap:0 .75rem}html body .mast nav.main a{flex:0 1 auto;white-space:nowrap;padding:0 .35rem}
+}
+/* 处境卡里的次级链接：行内链接点击区只有 17–18px（A4），折行时中心点落在整卡遮罩上（A7）；改 inline-block 并上下补白（site-line-1025，照 invest arch-1022 #10） */
+html body .sit .vv-lift:not(button){display:inline-block;padding-block:.25rem}
+/* 点击区（A4/A1，site-line-1025）：首页「常搜」属搜索入口按 44px；产品列表与出处行的独立链接补到 24px 以上 */
+html body .home-hot a{display:inline-flex;align-items:center;min-height:44px}
+html body main :is(li[data-product],p.small)>a{display:inline-block;padding-block:.2rem}
+/* 矩阵首列 sticky：键盘横向 Tab 时焦点格被首列盖住（A5 1280，site-line-1025） */
+html body .table-scroll{scroll-padding-inline-start:9.5em}
